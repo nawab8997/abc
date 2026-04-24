@@ -8,10 +8,10 @@ RUN apt-get update && apt-get install -y wget unzip
 RUN rm -rf /usr/share/nginx/html/*
 
 # Download repo as ZIP and extract
-RUN wget -O repo.zip https://github.com/nawab8997/Devops/archive/refs/heads/main.zip \
+RUN wget -O repo.zip https://github.com/nawab8997/Devops/archive/refs/heads/master.zip \
     && unzip repo.zip \
-    && cp -r Devops-main/* /usr/share/nginx/html/ \
-    && rm -rf repo.zip Devops-main
+    && cp -r Devops-master/* /usr/share/nginx/html/ \
+    && rm -rf repo.zip Devops-master
 
 # Expose port
 EXPOSE 80
